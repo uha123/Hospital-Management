@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+
+.container{
+    background-color: hsl(61, 85%, 50%);
+    align-self: center;
+    width:600px;
+    padding:20px 70px;
+    font-family: 'source-sans-pro',sans-serif;
+    /* font-weight: bold; */
+    border-radius: 8px;
+
+    -webkit-box-shadow: 0px 7px 27px 8px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 7px 27px 8px rgba(0,0,0,0.27);
+    box-shadow: 0px 7px 27px 8px rgba(0,0,0,0.27);
+}
+
+
+.select{
+    width: 200px;
+}
+
+.button{
+    width:200px;
+}
+body{
+    font-family: sans-serif;
+    background-image: url('https://yesofcorsa.com/wp-content/uploads/2017/05/Hospital-Wallpaper-For-Desktop.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100%;
+    height: 900px;
+}

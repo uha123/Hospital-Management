@@ -1,0 +1,52 @@
+<body>
+    <div class="container my-5">
+        <h3 style="color:hsl(0, 9%, 15%)"> Doctor </h3>
+    
+        <form autocomplete="off" #register='ngForm' (ngSubmit)="register.valid && submit(register)" >
+            <div class="row">
+                <div class="form-group mr-5">
+                    <label for="name" class="font-weight-bold" style="color:#006eff">Name</label>
+                    <input type="text" class="form-control" placeholder="enter name" name="name" [(ngModel)]='doctor.name'>
+                </div>
+               <div class="form-group">
+                    <label for="age" class="font-weight-bold" style="color:#006eff">Age</label>
+                    <input type="number" class="form-control" placeholder="enter age" name="age" [(ngModel)]='doctor.age'>
+                </div> 
+            </div>
+    
+          
+    
+            <div class="row">
+                <label class="form-check-label font-weight-bold mt-3 w-100" style="color:#006eff" for="gen" >Gender</label>
+                <div class="form-check my-2 ml-2">
+                    <input type="radio" class="form-check-input mr-1" name="grn" value="Female" [(ngModel)]="doctor.gender">
+                    <label class="form-check-label mr-5" for="gen" style="color:#ff00b3">Female</label>
+                    <input type="radio" class="form-check-input mr-1" name="gen" value="Male" [(ngModel)]="doctor.gender">
+                    <label class="form-check-label mr-5" for="gen" style="color:#ff00b3">Male</label>
+                    <input type="radio" class="form-check-input mr-1" name="gen" value="Others" [(ngModel)]="doctor.gender">
+                    <label class="form-check-label" for="gen" style="color:#ff00b3">Others</label>
+                </div>
+            </div>
+    
+            
+          <div class="row mb-4">
+                <label class="form-check-label font-weight-bold w-50 mb-2" style="color:#006eff" for="specialist">Select Specialist</label>
+                
+                <div class="ml-2 select">
+                    
+                    <select class="custom-select w-100 mb-3" name="specialist"  [(ngModel)]="doctor.specialist">
+                        <option selected>--select-specialist--</option>
+                        <option *ngFor="let sp of specialist" [value]="sp">{{sp}}</option>
+                    </select>
+                </div>
+    
+            </div>
+    
+            <div class="row">
+                <button type="submit" class="btn btn-success button mx-3">Submit</button>
+                <button type="reset" class="btn btn-warning button ml-5">Clear</button>
+            </div>
+        </form>
+    </div> 
+    </body>
+    

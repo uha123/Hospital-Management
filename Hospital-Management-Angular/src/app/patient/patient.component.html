@@ -1,0 +1,44 @@
+<body>
+    <div class="container my-5 ">
+        <h2>Patient</h2>
+        <form   autocomplete="off" #register='ngForm' (ngSubmit)="register.valid && submit()">
+            <div class="row">
+                    <div for="name" class="font-weight-bold" style="color:hsl(60, 2%, 9%)"><label>Name:</label>
+                        <input type="text" class="form-control" placeholder="enter name" name="name"
+                            [(ngModel)]='patient.name'>
+                </div>
+            </div> <br>
+          <!--  <div class="row">
+                <div class="visitedDoc" class="font-weight-bold" style="color:#b3ff00"><label>VisitedDoc:</label>
+                    <input type="text" class="form-control" placeholder="enter visitedDoc" name="visitedDoc"
+                        [(ngModel)]='patient.visitedDoc'>
+                </div>
+            </div> <br> -->
+            <div class="row"><div class="dtOfVisit" class="font-weight-bold" style="color: #131413;">  <label>VisitedDoc</label>
+                 <select  [(ngModel)] = "patient.visitedDoc" name="doctorName">
+                    <option *ngFor="let doctor of names" [value]="doctor">{{doctor}}</option>
+                </select> </div> 
+            </div> <br>
+            <div class="row">
+                <div class="dtOfVisit" class="font-weight-bold" style="color:#131413"><label>DtOfVisit:</label> <br>
+    
+                    <input type="date" name="dtOfVisit" placeholder="dd-mm-yyyy" value="" min="dd-mm-yyyy" max="dd-mm-yyyy"
+                        [(ngModel)]='patient.dtOfVisit'>
+                </div>
+            </div>
+            <div class="row">
+                <div for="prescription" class="font-weight-bold" style="color:#272928"><label > Prescription:</label>
+    
+                <input type="text" class="form-control" placeholder="enter prescription" name="prescription"
+                    [(ngModel)]='patient.prescription'>
+            </div>
+    
+    </div> <br>
+    
+    <div class="row">
+        <button type="submit" class="btn btn-success button mx-3">Submit</button>
+        <button type="reset" class="btn btn-warning button ml-5">Clear</button>
+    </div>
+    </form>
+    </div>
+    </body>
